@@ -15,10 +15,13 @@ function myFunction() {
   
 
   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText);
-  
-  /* Alert the copied text */
-  alert("Copied the text");
+  navigator.clipboard
+      .writeText(copyText)
+      .then(() => {
+        alert("successfully copied");
+      })
+      .catch(() => {
+        alert("something went wrong");
 }
 </script>
 
